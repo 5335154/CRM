@@ -19,7 +19,7 @@ class LoginTestCase(unittest.TestCase):
         read = read_txt(r"D:\git_root\5kCRM\data\user.txt")
         username = read[0][0]
         password = read[0][1]
-        shiji = lg.login(username,password)
+        shiji = lg.login("admin","banxian123")
 
         self.assertEqual("http://192.168.1.120/index.php?m=dynamic&a=index", shiji)
 

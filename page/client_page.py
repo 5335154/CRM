@@ -51,6 +51,7 @@ class Client():
         res = self.reslut_catc()
         return res
         time.sleep(2)
+
     def add_client(self, name):
         '''添加客户放入客户池'''
         self.click_client()

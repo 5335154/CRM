@@ -23,13 +23,13 @@ class BusinessTestCase(unittest.TestCase):
         sj = read_csv(r"D:\git_root\5kCRM\data\business.csv")
         busname = sj[5][0]
         yprice = sj[5][1]
-        shiji = bus.add_bus_opp("商C",yprice)
+        shiji = bus.add_bus_opp("商C","20000")
         self.assertIn("添加商机成功", shiji)
 #搜索商机
-        # search = SearchBusinessCase(self.driver)
-        # shiti = search.search("大商机")
-        # self.assertEqual("http://192.168.1.120/index.php?field=name&condition=contains&search=%E5%A4%A7%E5%95%86%E6%9C%BA&m=business&act=search&daochu=&current_page=&export_limit=&by=deleted",
-        #                  shiti)
+        search = SearchBusinessCase(self.driver)
+        shiti = search.search("大商机")
+        self.assertEqual("http://192.168.1.120/index.php?field=name&condition=contains&search=%E5%A4%A7%E5%95%86%E6%9C%BA&m=business&act=search&daochu=&current_page=&export_limit=&by=deleted",
+                         shiti)
 
 if __name__ == '__main__':
     unittest.main()

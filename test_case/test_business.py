@@ -23,7 +23,7 @@ class BusinessTestCase(unittest.TestCase):
         sj = read_csv(r"D:\git_root\5kCRM\data\business.csv")
         busname = sj[3][0]
         yprice = sj[3][1]
-        shiji = bus.add_bus_opp("我是B",yprice)
+        shiji = bus.add_bus_opp("我是B","10000")
 
         self.assertIn("添加商机成功", shiji)
 
